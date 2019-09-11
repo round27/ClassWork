@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static '/css/app.css' %}" >
+    <script type="text/javascript" src="{% static '/js/app.js' %}">
+
+    </script>
+  <body onload="hello();">
+    <div class="container">
+      <img src="{% static '/images/logo.png' %}" alt="No Images" width="100%">
+
+      <div>
+      {% for std in students%}
+        {{std.id}} {{std.name}} {{std.email}} <br/>
+      {% endfor%}
+      </div>
+
+      </div>
+  </body>
+</html>
